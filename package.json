@@ -1,0 +1,33 @@
+{
+  "name": "@koyfin/ms-basement",
+  "version": "0.1.0",
+  "description": "Koyfin microservices basement",
+  "license": "UNLICENSED",
+  "files": [
+    "src"
+  ],
+  "author": {
+    "name": "EzeTech",
+    "url": "http://eze.tech/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "cs": "eslint src/* __tests__/*",
+    "cs:fix": "eslint src/* __tests__/* --fix",
+    "test": "npm run cs"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.10"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "engines": {
+    "node": "^8.1.0"
+  }
+}
