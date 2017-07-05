@@ -158,8 +158,6 @@ module.exports = class Basement {
     }
 
     this.logger.info('Started')
-
-    return Promise.resolve()
   }
 
   /**
@@ -190,15 +188,14 @@ module.exports = class Basement {
     try {
       await this.stopSequence()
       clearTimeout(timeoutId)
+      process.exit()
     } catch (error) {
       if (!isTest) {
         this.logger.error(error, '✘ Error during shutdown')
         process.exit(1)
       } else {
-        return Promise.reject(error)
+        throw error
       }
     }
-
-    return Promise.resolve()
   }
 }
