@@ -10,10 +10,12 @@ if (!isTest) {
 
   process.on('unhandledRejection', (reason, promise) => {
     initialLogger.error({ reason, promise }, 'Unhandled Rejection')
+    process.exit(1)
   })
 
   process.on('uncaughtException', (error) => {
     initialLogger.error(error, 'Unhandled Exception')
+    process.exit(1)
   })
 
   process.on('exit', (code) => {
