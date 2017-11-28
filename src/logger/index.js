@@ -2,7 +2,7 @@ const {createLogger, stdSerializers} = require('bunyan')
 const {name, version} = require('./project-metadata')
 const SpecificLevelStream = require('./specific-level-stream')
 
-const logger = createLogger({
+let currentLogger = createLogger({
   name,
   version,
   streams: [
@@ -24,4 +24,15 @@ const logger = createLogger({
   }
 })
 
-module.exports = logger
+module.exports = {
+  get logger () {
+    return currentLogger
+  },
+
+  set logger (logger) {
+    if (logger instanceof Object === false || !Object.keys(logger).length) {
+      throw new TypeError('Logger must be an object representing logger instance')
+    }
+    currentLogger = logger
+  }
+}

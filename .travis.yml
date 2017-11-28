@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '8.9'
+script:
+  - npm test
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install --no-optional
+deploy:
+  provider: npm
+  email: ostapnagovitsyn@gmail.com
+  api_key:
+    secure: YLfhPgDlOGdnlnxsYqbLrF7CLY77pl92x5Q9zLpSuKZZ3dwYD8eYJsVxk3SZ8V3TpHYZJxBdM8z+bUaRZ72bvXZFvjGaZQRJRmo91pv0YrWDZYDO65mI/8BfeyvWRHPXHynl0RiDfxECxUSdCY7bx+T+/fTcuRVYfFU/7oBNuqCGsGrMw8sJ7YE4eWaz8iC0FKUzQWAaSWBnV9kydgJ3OyTzm+A618c1dr5DpQi/svBr5VpZFYhNjUq/ZOux2h2i4ZdrpEKUOMPGintT6T0CxrfW5nR1MI1YpPVYjFVvGelZA1UD6ayfks1BaEnnegv2nHUv3/nKoxx5Y+kN27cAreQ1+LFmJIhTzGVf3DcXouHIUpCFLxDRrYrmfkgkXzagSHftZZp+hGI4L8pX2XSa53K1LT5yEKcy+JEoOpTp/wQSvEGKe5VIvUJLyBc1hSp6qovamHsBAt3FjKPFcSIVfGuHe/SKTX+9lyiAd96ZhLqOqsSo1KwDVX6UwF3F2qW36PxdtvQkGUaEDZYZAQ+SKGGr8MAo7b9sldFKm6aA+5qp9rJurkQvoJuKB5iyPrSRYGlyFhdR3xoO9GE3dIvwiQqTQGInxrkF53r4+XBF2umYJa2/VniBvziEPJF+UzDqE183FqRjU/AD8sNMurjAZ7RoH+MhpcPlBTwByre/CCg=
+  on:
+    tags: true
+    repo: Koyfin/ms-basement
