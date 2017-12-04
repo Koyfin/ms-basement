@@ -1,19 +1,7 @@
 require('./global')
 const {expect} = require('chai')
 const sinon = require('sinon')
-const {Basement, BaseBoundary} = require('../src/index')
-
-class Boundary extends BaseBoundary {
-  static init () {}
-
-  static stop () {}
-}
-
-class App extends Basement {
-  startSequence () {}
-
-  stopSequence () {}
-}
+const {App, Boundary} = require('./mocks/app')
 
 describe('basement', function () {
   let app, logger
