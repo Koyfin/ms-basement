@@ -2,6 +2,14 @@
   "name": "@koyfin/ms-basement",
   "version": "0.1.3",
   "description": "Koyfin microservices basement",
+  "homepage": "https://github.com/Koyfin/ms-basement#readme",
+  "bugs": {
+    "url": "https://github.com/Koyfin/ms-basement/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koyfin/ms-basement.git"
+  },
   "license": "UNLICENSED",
   "files": [
     "src"
@@ -12,22 +20,23 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "cs": "eslint src/* __tests__/*",
-    "cs:fix": "eslint src/* __tests__/* --fix",
-    "test": "npm run cs"
+    "test": "eslint ./src ./test && mocha"
   },
   "dependencies": {
-    "bunyan": "^1.8.10"
+    "bunyan": "^1.8.12",
+    "sinon": "^4.1.2"
   },
   "devDependencies": {
-    "eslint": "^4.1.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.12.0",
     "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-node": "^5.1.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.0.1"
   },
   "engines": {
-    "node": "^8.1.0"
+    "node": "^8.9.1"
   }
 }
