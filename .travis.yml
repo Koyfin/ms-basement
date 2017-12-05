@@ -16,3 +16,4 @@ deploy:
   on:
     tags: true
     repo: Koyfin/ms-basement
+    branch: master
