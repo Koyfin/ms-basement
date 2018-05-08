@@ -11,7 +11,7 @@ class SpecificLevelStream {
 
   write (rec) {
     if (this.levels[rec.level]) {
-      this.stream.write(`${JSON.stringify(rec, safeCycles())}\n'`)
+      this.stream.write(`${JSON.stringify(rec, safeCycles())}\n`)
     }
   }
 }
