@@ -1,4 +1,4 @@
-const {resolveLevel, safeCycles} = require('bunyan')
+const { resolveLevel, safeCycles } = require('bunyan')
 
 class SpecificLevelStream {
   constructor (levels, stream) {

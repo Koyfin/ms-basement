@@ -1,4 +1,4 @@
-const {Basement, BaseBoundary} = require('../../src/index')
+const { Basement, BaseBoundary } = require('../../src/index')
 
 class Boundary extends BaseBoundary {
   static init () {}

@@ -1,6 +1,6 @@
 const BaseBoundary = require('./boundaries/base')
 const AutoRecoveringBoundary = require('./boundaries/auto-recovering')
-let currentLogger = require('./logger')
+const currentLogger = require('./logger')
 
 /**
  * Pseudo-abstract base class which other apps should inherit from
@@ -13,7 +13,7 @@ class Basement {
    * @param {Object} [logger] - Custom logger that used instead of default.
    * @param {Object} boundaries - Application boundaries to handle.
    */
-  constructor ({settings, logger, boundaries}) {
+  constructor ({ settings, logger, boundaries }) {
     this.settings = settings
     this.boundaries = boundaries
     currentLogger.logger = logger

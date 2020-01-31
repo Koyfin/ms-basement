@@ -1,5 +1,5 @@
-const {createLogger, stdSerializers} = require('bunyan')
-const {name, version} = require('./project-metadata')
+const { createLogger, stdSerializers } = require('bunyan')
+const { name, version } = require('./project-metadata')
 const SpecificLevelStream = require('./specific-level-stream')
 
 let currentLogger = createLogger({

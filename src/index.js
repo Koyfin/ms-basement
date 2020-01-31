@@ -1,4 +1,4 @@
-let {logger} = require('./logger')
+const { logger } = require('./logger')
 
 const Basement = require('./basement')
 const BaseBoundary = require('./boundaries/base')
@@ -11,7 +11,7 @@ if (!Basement.isTestEnv()) {
   })
 
   process.on('unhandledRejection', (reason) => {
-    logger.fatal({error: reason}, 'Unhandled Rejection')
+    logger.fatal({ error: reason }, 'Unhandled Rejection')
     process.exit(1)
   })
 
@@ -26,7 +26,7 @@ if (!Basement.isTestEnv()) {
 
   process.on('message', (message, sendHandle) => {
     logger.fatal(
-      {message, sendHandle},
+      { message, sendHandle },
       'Mesage from parent detected. It looks like a error')
   })
 

@@ -1,7 +1,7 @@
 require('./global')
-const {expect} = require('chai')
+const { expect } = require('chai')
 const sinon = require('sinon')
-const {App, Boundary} = require('./mocks/app')
+const { App, Boundary } = require('./mocks/app')
 
 describe('basement', function () {
   let app, logger
@@ -21,7 +21,7 @@ describe('basement', function () {
       some: 'val'
     }
 
-    app = new App({settings, logger, boundaries})
+    app = new App({ settings, logger, boundaries })
   })
 
   it('should start and stop', async function () {
